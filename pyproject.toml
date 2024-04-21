@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "rag-llm-telebot"
+version = "0.1.0"
+description = "This is a telegram bot with using LLM and RAG to be an assistant in various life cases"
+authors = ["Vadim <sharvadim07@yandex.ru>"]
+license = "/Users/vadim/ownCloud/development/PythonScripts/rag_llm_telebot/LICENSE"
+readme = "README.md"
+packages = [{include = "rag_llm_bot"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-telegram-bot = {extras = ["job-queue"], version = "^20.1"}
+aiosqlite = "^0.20.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.0"
+pre-commit = "^3.7.0"
+flake8 = "^7.0.0"
+mypy = "^1.9.0"
+types-python-dateutil = "^2.9.0.20240316"
+types-pytz = "^2024.1.0.20240417"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
